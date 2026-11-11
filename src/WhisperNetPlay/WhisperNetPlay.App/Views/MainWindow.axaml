@@ -1,0 +1,91 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:WhisperNetPlay.App.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="520" d:DesignHeight="780"
+        x:Class="WhisperNetPlay.App.Views.MainWindow"
+        x:DataType="vm:TranscriptionViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="WhisperNetPlay"
+        Width="520" Height="780"
+        MinWidth="440" MinHeight="560"
+        WindowStartupLocation="CenterScreen"
+        Background="{DynamicResource BrandBackgroundBrush}">
+
+    <Design.DataContext>
+        <vm:TranscriptionViewModel />
+    </Design.DataContext>
+
+    <Border Margin="16" Padding="16" CornerRadius="12"
+            Background="{DynamicResource BrandSurfaceBrush}"
+            BorderBrush="{DynamicResource BrandBorderBrush}"
+            BorderThickness="1">
+        <Grid RowDefinitions="Auto,*,Auto,Auto">
+
+            <Grid Grid.Row="0" ColumnDefinitions="*,Auto" ColumnSpacing="12">
+                <StackPanel Spacing="10">
+                    <StackPanel Orientation="Horizontal" Spacing="10">
+                        <Border Width="10" Height="22" CornerRadius="3"
+                                Background="{DynamicResource BrandAccentBrush}" />
+                        <TextBlock Text="Live Transcription" Classes="h1" VerticalAlignment="Center" />
+                    </StackPanel>
+                    <Border Classes="backend"
+                            Classes.gpu="{Binding IsGpuBackend}"
+                            Classes.cpu="{Binding IsCpuBackend}"
+                            HorizontalAlignment="Left"
+                            AutomationProperties.Name="Inference backend">
+                        <TextBlock Text="{Binding BackendText}" />
+                    </Border>
+                </StackPanel>
+
+                <Button Grid.Column="1"
+                        Classes.accent="{Binding !IsListening}"
+                        Classes.rec="{Binding IsListening}"
+                        MinWidth="120"
+                        VerticalAlignment="Top"
+                        Content="{Binding MicButtonText}"
+                        Command="{Binding ToggleMicCommand}"
+                        AutomationProperties.Name="{Binding MicButtonText}"
+                        AutomationProperties.HelpText="Start or stop live microphone transcription" />
+            </Grid>
+
+            <TextBox Grid.Row="1" Margin="0,16,0,0"
+                     Text="{Binding TranscriptText, Mode=TwoWay}"
+                     AcceptsReturn="True" TextWrapping="Wrap"
+                     VerticalContentAlignment="Top"
+                     PlaceholderText="Transcribed text appears here — you can edit it."
+                     ScrollViewer.VerticalScrollBarVisibility="Auto"
+                     AutomationProperties.Name="Transcript"
+                     AutomationProperties.HelpText="Editable live transcription" />
+
+            <Border Grid.Row="2" Margin="0,12,0,0" Padding="12,8" CornerRadius="8"
+                    Background="{DynamicResource BrandSurfaceAltBrush}"
+                    BorderBrush="{DynamicResource BrandBorderBrush}"
+                    BorderThickness="1"
+                    IsVisible="{Binding HasInterim}">
+                <TextBlock Text="{Binding InterimText}"
+                           Classes="caption"
+                           FontStyle="Italic"
+                           TextWrapping="Wrap" />
+            </Border>
+
+            <Grid Grid.Row="3" Margin="0,12,0,0" ColumnDefinitions="Auto,*,Auto"
+                  ColumnSpacing="8" VerticalAlignment="Center">
+                <Ellipse Grid.Column="0" Width="10" Height="10"
+                         VerticalAlignment="Center"
+                         Fill="{DynamicResource BrandAccentBrush}"
+                         IsVisible="{Binding IsListening}"
+                         AutomationProperties.Name="Listening" />
+                <TextBlock Grid.Column="1" VerticalAlignment="Center"
+                           Classes="caption"
+                           TextTrimming="CharacterEllipsis"
+                           Text="{Binding StatusText}" />
+                <Button Grid.Column="2" MinWidth="88" Content="Clear"
+                        Command="{Binding ClearTranscriptCommand}"
+                        AutomationProperties.Name="Clear transcript"
+                        AutomationProperties.HelpText="Clear the transcript and interim text" />
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

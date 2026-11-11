@@ -1,0 +1,38 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="WhisperNetPlay.App.App"
+             RequestedThemeVariant="Dark">
+
+    <Application.Resources>
+        <Color x:Key="BrandBackground">#0B0E13</Color>
+        <Color x:Key="BrandSurface">#141922</Color>
+        <Color x:Key="BrandSurfaceAlt">#1B2230</Color>
+        <Color x:Key="BrandBorder">#28303E</Color>
+        <Color x:Key="BrandAccent">#22D3C5</Color>
+        <Color x:Key="BrandAccentDim">#149C92</Color>
+        <Color x:Key="BrandOnAccent">#05221F</Color>
+        <Color x:Key="BrandText">#E7ECF3</Color>
+        <Color x:Key="BrandTextDim">#8A94A6</Color>
+        <Color x:Key="BrandRec">#FF4D5E</Color>
+        <Color x:Key="BrandGpu">#22D3C5</Color>
+        <Color x:Key="BrandCpu">#F5A524</Color>
+
+        <SolidColorBrush x:Key="BrandBackgroundBrush" Color="{DynamicResource BrandBackground}" />
+        <SolidColorBrush x:Key="BrandSurfaceBrush" Color="{DynamicResource BrandSurface}" />
+        <SolidColorBrush x:Key="BrandSurfaceAltBrush" Color="{DynamicResource BrandSurfaceAlt}" />
+        <SolidColorBrush x:Key="BrandBorderBrush" Color="{DynamicResource BrandBorder}" />
+        <SolidColorBrush x:Key="BrandAccentBrush" Color="{DynamicResource BrandAccent}" />
+        <SolidColorBrush x:Key="BrandAccentDimBrush" Color="{DynamicResource BrandAccentDim}" />
+        <SolidColorBrush x:Key="BrandOnAccentBrush" Color="{DynamicResource BrandOnAccent}" />
+        <SolidColorBrush x:Key="BrandTextBrush" Color="{DynamicResource BrandText}" />
+        <SolidColorBrush x:Key="BrandTextDimBrush" Color="{DynamicResource BrandTextDim}" />
+        <SolidColorBrush x:Key="BrandRecBrush" Color="{DynamicResource BrandRec}" />
+        <SolidColorBrush x:Key="BrandGpuBrush" Color="{DynamicResource BrandGpu}" />
+        <SolidColorBrush x:Key="BrandCpuBrush" Color="{DynamicResource BrandCpu}" />
+    </Application.Resources>
+
+    <Application.Styles>
+        <FluentTheme />
+        <StyleInclude Source="/Styles/AppStyles.axaml" />
+    </Application.Styles>
+</Application>

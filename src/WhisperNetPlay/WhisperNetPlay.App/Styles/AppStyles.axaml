@@ -1,0 +1,101 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style Selector="TextBlock.h1">
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{DynamicResource BrandTextBrush}" />
+    </Style>
+
+    <Style Selector="TextBlock.body">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Foreground" Value="{DynamicResource BrandTextBrush}" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="LineHeight" Value="22" />
+    </Style>
+
+    <Style Selector="TextBlock.caption">
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="Foreground" Value="{DynamicResource BrandTextDimBrush}" />
+    </Style>
+
+    <Style Selector="Button">
+        <Setter Property="Background" Value="{DynamicResource BrandSurfaceAltBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource BrandTextBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource BrandBorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="8" />
+        <Setter Property="Padding" Value="16,10" />
+        <Setter Property="MinHeight" Value="44" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+    </Style>
+    <Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource BrandBorderBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource BrandAccentDimBrush}" />
+        <Setter Property="TextElement.Foreground" Value="{DynamicResource BrandTextBrush}" />
+    </Style>
+    <Style Selector="Button:disabled /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Opacity" Value="0.4" />
+    </Style>
+
+    <Style Selector="Button.accent">
+        <Setter Property="Background" Value="{DynamicResource BrandAccentBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource BrandOnAccentBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource BrandAccentBrush}" />
+    </Style>
+    <Style Selector="Button.accent:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource BrandAccentDimBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource BrandAccentDimBrush}" />
+        <Setter Property="TextElement.Foreground" Value="{DynamicResource BrandOnAccentBrush}" />
+    </Style>
+
+    <Style Selector="Button.rec">
+        <Setter Property="Foreground" Value="{DynamicResource BrandRecBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource BrandRecBrush}" />
+        <Setter Property="Background" Value="{DynamicResource BrandSurfaceAltBrush}" />
+    </Style>
+    <Style Selector="Button.rec:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource BrandSurfaceBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource BrandRecBrush}" />
+        <Setter Property="TextElement.Foreground" Value="{DynamicResource BrandRecBrush}" />
+    </Style>
+
+    <Style Selector="TextBox">
+        <Setter Property="Background" Value="{DynamicResource BrandSurfaceAltBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource BrandTextBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource BrandBorderBrush}" />
+        <Setter Property="CornerRadius" Value="8" />
+        <Setter Property="Padding" Value="12,10" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="CaretBrush" Value="{DynamicResource BrandAccentBrush}" />
+        <Setter Property="SelectionBrush" Value="{DynamicResource BrandAccentDimBrush}" />
+    </Style>
+
+    <Style Selector="Border.backend">
+        <Setter Property="CornerRadius" Value="8" />
+        <Setter Property="Padding" Value="10,6" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="{DynamicResource BrandBorderBrush}" />
+        <Setter Property="Background" Value="{DynamicResource BrandSurfaceAltBrush}" />
+        <Setter Property="MinHeight" Value="32" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+    <Style Selector="Border.backend.gpu">
+        <Setter Property="BorderBrush" Value="{DynamicResource BrandGpuBrush}" />
+    </Style>
+    <Style Selector="Border.backend.cpu">
+        <Setter Property="BorderBrush" Value="{DynamicResource BrandCpuBrush}" />
+    </Style>
+    <Style Selector="Border.backend TextBlock">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="Foreground" Value="{DynamicResource BrandTextDimBrush}" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+    <Style Selector="Border.backend.gpu TextBlock">
+        <Setter Property="Foreground" Value="{DynamicResource BrandGpuBrush}" />
+    </Style>
+    <Style Selector="Border.backend.cpu TextBlock">
+        <Setter Property="Foreground" Value="{DynamicResource BrandCpuBrush}" />
+    </Style>
+</Styles>

@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="WhisperNetPlay.App/WhisperNetPlay.App.csproj" />
+  <Project Path="WhisperNetPlay.Speech/WhisperNetPlay.Speech.csproj" />
+</Solution>

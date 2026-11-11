@@ -1,0 +1,39 @@
+# Build
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.rsuser
+*.DotSettings.user
+.vs/
+
+# NuGet
+*.nupkg
+*.snupkg
+**/packages/*
+
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Models and runtime logs (downloaded locally, not source)
+*.bin
+*.ggml
+*.gguf
+**/models/
+crash.log
+whisper-native.log
+
+# Local / private context — not part of the public sample
+contextbuffer/
+EndoSpock_inspire/
+
+# IDE
+.idea/
+*.userprefs

@@ -1,0 +1,9 @@
+{
+  "directives": [
+    {
+      "name": "capture_still",
+      "phrases": ["capture image", "take photo", "snap picture"],
+      "cooldownMs": 800
+    }
+  ]
+}

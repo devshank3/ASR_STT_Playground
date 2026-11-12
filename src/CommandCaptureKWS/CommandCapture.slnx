@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/CommandCapture.App/CommandCapture.App.csproj" />
+    <Project Path="src/CommandCapture.Audio/CommandCapture.Audio.csproj" />
+    <Project Path="src/CommandCapture.Camera/CommandCapture.Camera.csproj" />
+    <Project Path="src/CommandCapture.Voice/CommandCapture.Voice.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/CommandCapture.Voice.Tests/CommandCapture.Voice.Tests.csproj" />
+  </Folder>
+</Solution>
